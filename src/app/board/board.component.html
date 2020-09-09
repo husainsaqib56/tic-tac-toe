@@ -1,0 +1,16 @@
+<section class="bg-image">
+    <div style="padding:20px">
+        <h1>Current Player: {{ player}}</h1>
+
+        <button nbButton shape="semi-round" status="info" style="margin-bottom: 20px;" (click)="newGame()">Starts new
+            Game</button>
+
+        <h2 *ngIf="winner">
+            Player {{winner}} won the game!
+        </h2>
+
+        <main>
+            <app-square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></app-square>
+        </main>
+    </div>
+</section>

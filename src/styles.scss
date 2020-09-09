@@ -1,0 +1,29 @@
+@import "themes";
+// regular style toast
+@import "~ngx-toastr/toastr";
+// bootstrap style toast
+// or import a bootstrap 4 alert styled design (SASS ONLY)
+// should be after your bootstrap imports, it uses bs4 variables, mixins, functions
+@import "~ngx-toastr/toastr-bs4-alert";
+@import "~@nebular/theme/styles/globals";
+@include nb-install() {
+    @include nb-theme-global();
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+// body {}
+// .nb-theme-cosmic nb-layout .layout {
+//     background-image: url("https://img.wallpapersafari.com/desktop/1600/900/38/50/S0OBza.jpg") !important;
+//     background-size: cover;
+// }
+.nb-theme-cosmic nb-layout .layout .layout-container .content .columns nb-layout-column {
+    padding: unset;
+}
+
+.nb-theme-cosmic [nbButton].appearance-filled.status-primary {
+    background-color: #a16eff;
+    border-color: #a16eff;
+    color: #ffffff;
+}
